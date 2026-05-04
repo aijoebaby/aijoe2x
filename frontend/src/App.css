@@ -1,0 +1,150 @@
+/* Global App Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  padding: 10px;
+}
+
+/* Loading Screen */
+.loading-screen {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 9 / 16;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  border: 2px solid #ff9500;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 149, 0, 0.3);
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo-title {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 149, 0, 0.5);
+}
+
+.logo-ai {
+  color: #ffffff;
+}
+
+.logo-joe {
+  color: #ff9500;
+  text-shadow: 0 0 20px #ff9500, 0 0 40px #ff9500;
+}
+
+.logo-subtitle {
+  font-size: 28px;
+  letter-spacing: 6px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.paw-print {
+  font-size: 48px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.loading-text {
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: #ff9500;
+  font-weight: bold;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid #ff9500;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ff9500, #ffa500);
+  animation: loading 2s infinite;
+  border-radius: 3px;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .loading-screen {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .logo-title {
+    font-size: 48px;
+  }
+
+  .logo-subtitle {
+    font-size: 24px;
+  }
+
+  .paw-print {
+    font-size: 40px;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 5px;
+  }
+}
